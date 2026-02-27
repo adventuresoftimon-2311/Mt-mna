@@ -150,8 +150,9 @@ function initFrameworkHorizontalScroll() {
             snap: {
                 snapTo: 1 / (panels.length - 1),
                 duration: { min: 0.2, max: 0.6 },
-                delay: 0.1,
-                ease: "power2.inOut"
+                delay: 0,
+                directional: true,
+                ease: "power1.inOut"
             },
             end: () => "+=" + wrapper.offsetWidth
         }
