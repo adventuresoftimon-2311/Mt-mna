@@ -1,0 +1,363 @@
+/* src/style.css */
+:root {
+  --primary-bg: #FFFFFF;
+  --secondary-bg: #F8F9FA;
+  --hero-depth: #F1F5F9;
+  --card-bg: #FFFFFF;
+  --divider: #E2E8F0;
+  --text-secondary: #64748B;
+  --text-primary: #0F172A;
+  --accent-blue: #2E6BFF;
+
+  --spacing-section: 100px;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(56px, 6vw, 72px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 40px);
+}
+
+p {
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: var(--spacing-section) 0;
+}
+
+.alt-bg {
+  background-color: var(--secondary-bg);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--divider);
+  width: 100%;
+}
+
+/* Animations Managed by GSAP */
+.animated-element {
+  will-change: transform, opacity;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--divider);
+  padding: 2.5rem;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 8px;
+  /* Slight modernization */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(46, 107, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  /* Light theme shadow */
+}
+
+/* Header */
+header {
+  padding: 1rem 0;
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid var(--divider);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent-blue);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-blue);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 1rem;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  color: var(--text-primary);
+  text-shadow: 0 0 8px rgba(46, 107, 255, 0.6);
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+    /* simple mobile approach for now */
+  }
+}
+
+/* RTL Support for Arabic */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .logo,
+[dir="rtl"] .nav-links a {
+  letter-spacing: 0;
+  /* Clear tracking for Arabic scripts */
+}
+
+/* Utility */
+.subtext {
+  color: var(--text-primary);
+  font-size: clamp(20px, 2vw, 24px);
+  max-width: 800px;
+  margin-top: 1.5rem;
+}
+
+.locations {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.micro-heading {
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--text-primary);
+}
+
+[dir="rtl"] ul li {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+[dir="rtl"] ul li::before {
+  left: auto;
+  right: 0;
+}
+
+/* Show More / Expandable Content */
+.expandable-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.expandable-wrapper>div {
+  overflow: hidden;
+}
+
+.expandable-wrapper.expanded {
+  grid-template-rows: 1fr;
+}
+
+.show-more-btn {
+  background: none;
+  border: none;
+  color: var(--accent-blue);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0;
+  margin-top: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.show-more-btn:hover {
+  opacity: 0.7;
+}
+
+/* Custom Cursor */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: difference;
+  transition: opacity 0.3s ease;
+}
+
+/* GSAP Horizontal Scroll Utility */
+.horizontal-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.horizontal-wrapper {
+  display: flex;
+  width: 300vw;
+  height: 100vh;
+  will-change: transform;
+}
+
+.horizontal-panel {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
