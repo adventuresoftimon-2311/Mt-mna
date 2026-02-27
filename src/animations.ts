@@ -140,25 +140,25 @@ function initFrameworkHorizontalScroll() {
 
     if (!container || !wrapper || panels.length === 0) return;
 
-    gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
-        ease: "none",
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: container,
             pin: true,
-            // Use true instead of numbers. Lenis already smooths the scroll. 
-            // A number here adds a double-delay which prevents GSAP snap from ever firing.
-            scrub: true,
+            scrub: 1, // Smooth scrub
             snap: {
                 snapTo: 1 / (panels.length - 1),
-                duration: { min: 0.6, max: 1.0 }, // Slower, more cinematic snap
-                delay: 0, // React immediately once lenis stops
-                directional: true, // "ein bisschen scrollen = nächstes Element"
-                ease: "power2.inOut"
+                duration: { min: 0.4, max: 0.8 },
+                delay: 0.15, // Crucial: wait for Lenis to finish its momentum
+                directional: true,
+                ease: "power3.inOut" // Stronger easing for the snap point
             },
-            // Shorten the required scroll distance drastically so one wheel tick covers more ground
-            end: () => "+=" + (window.innerHeight * 2)
+            end: () => "+=" + wrapper.offsetWidth
         }
+    });
+
+    tl.to(panels, {
+        xPercent: -100 * (panels.length - 1),
+        ease: "none"
     });
 }
 
