@@ -140,21 +140,20 @@ function initFrameworkHorizontalScroll() {
 
     if (!container || !wrapper || panels.length === 0) return;
 
-    const snapPoints = panels.map((_: any, i: number) => i / (panels.length - 1));
-
     gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         ease: "none",
         scrollTrigger: {
             trigger: container,
+            start: "top top", // Ensure explicit trigger start point
             pin: true,
-            scrub: 1, // Smooth scrub
+            scrub: 1, // Let lenis and scrub smooth the motion
             snap: {
-                snapTo: snapPoints, // Explicit targets: [0, 0.5, 1]
-                duration: 0.5, // Fixed aggressive duration
-                delay: 0.05, // Minimal delay
-                directional: true,
-                ease: "power2.inOut"
+                snapTo: 1 / (panels.length - 1), // Using a number increment enables true directional snapping
+                duration: 0.6,
+                delay: 0.05, // Trigger rapidly after user slows down
+                directional: true, // "A little scroll forces next step"
+                ease: "power3.inOut"
             },
             end: () => "+=" + wrapper.offsetWidth
         }
