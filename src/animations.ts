@@ -140,22 +140,18 @@ function initFrameworkHorizontalScroll() {
 
     if (!container || !wrapper || panels.length === 0) return;
 
-    gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
+    const getScrollAmount = () => -(wrapper.scrollWidth - window.innerWidth);
+
+    gsap.to(wrapper, {
+        x: getScrollAmount,
         ease: "none",
         scrollTrigger: {
             trigger: container,
-            start: "top top", // Ensure explicit trigger start point
+            start: "top top",
             pin: true,
-            scrub: 1, // Let lenis and scrub smooth the motion
-            snap: {
-                snapTo: 1 / (panels.length - 1), // Using a number increment enables true directional snapping
-                duration: 0.6,
-                delay: 0.05, // Trigger rapidly after user slows down
-                directional: true, // "A little scroll forces next step"
-                ease: "power3.inOut"
-            },
-            end: () => "+=" + wrapper.offsetWidth
+            scrub: 1,
+            end: () => `+=${wrapper.scrollWidth - window.innerWidth}`,
+            invalidateOnRefresh: true,
         }
     });
 }

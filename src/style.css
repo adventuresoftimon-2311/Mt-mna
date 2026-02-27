@@ -354,16 +354,15 @@ ul li::before {
 
 .horizontal-wrapper {
   display: flex;
-  width: 300vw;
+  gap: 100px;
+  width: max-content;
   height: 100vh;
+  padding: 0 10vw;
   will-change: transform;
 }
 
 .horizontal-panel {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
 }
