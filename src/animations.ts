@@ -146,15 +146,18 @@ function initFrameworkHorizontalScroll() {
         scrollTrigger: {
             trigger: container,
             pin: true,
-            scrub: 1,
+            // Use true instead of numbers. Lenis already smooths the scroll. 
+            // A number here adds a double-delay which prevents GSAP snap from ever firing.
+            scrub: true,
             snap: {
                 snapTo: 1 / (panels.length - 1),
-                duration: { min: 0.2, max: 0.6 },
-                delay: 0,
-                directional: true,
-                ease: "power1.inOut"
+                duration: { min: 0.6, max: 1.0 }, // Slower, more cinematic snap
+                delay: 0, // React immediately once lenis stops
+                directional: true, // "ein bisschen scrollen = nächstes Element"
+                ease: "power2.inOut"
             },
-            end: () => "+=" + wrapper.offsetWidth
+            // Shorten the required scroll distance drastically so one wheel tick covers more ground
+            end: () => "+=" + (window.innerHeight * 2)
         }
     });
 }
