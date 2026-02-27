@@ -146,11 +146,11 @@ function initFrameworkHorizontalScroll() {
         scrollTrigger: {
             trigger: container,
             pin: true,
-            scrub: 0.8,
+            scrub: 1,
             snap: {
                 snapTo: 1 / (panels.length - 1),
-                duration: { min: 0.3, max: 0.8 },
-                delay: 0.05,
+                duration: { min: 0.2, max: 0.6 },
+                delay: 0.1,
                 ease: "power2.inOut"
             },
             end: () => "+=" + wrapper.offsetWidth
