@@ -146,9 +146,13 @@ function initFrameworkHorizontalScroll() {
         scrollTrigger: {
             trigger: container,
             pin: true,
-            scrub: 1, // Add lag for cinematic feel
-            snap: 1 / (panels.length - 1),
-            // The scroll distance equals the width of the panels to feel 1:1
+            scrub: 0.8,
+            snap: {
+                snapTo: 1 / (panels.length - 1),
+                duration: { min: 0.3, max: 0.8 },
+                delay: 0.05,
+                ease: "power2.inOut"
+            },
             end: () => "+=" + wrapper.offsetWidth
         }
     });
