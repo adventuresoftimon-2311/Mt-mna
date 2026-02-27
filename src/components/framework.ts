@@ -16,12 +16,12 @@ export function renderFramework() {
         <div class="horizontal-wrapper" id="framework-scroll-wrapper" style="position: relative; z-index: 1;">
         
           <!-- Pillar 1 -->
-          <div class="horizontal-panel" style="width: 850px; flex-shrink: 0;">
+          <div class="horizontal-panel" style="width: 950px; flex-shrink: 0; padding-right: 400px;">
             <!-- Huge Background Text (Right Side) -->
-            <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); text-align: right; pointer-events: none; z-index: 0;">
+            <div style="position: absolute; right: 50px; top: 50%; transform: translateY(-50%); text-align: right; pointer-events: none; z-index: 0; width: 350px;">
               <span style="display: block; font-size: clamp(100px, 15vw, 250px); font-weight: 800; color: rgba(15, 23, 42, 0.05); line-height: 0.8; letter-spacing: -0.02em;">01</span>
               <span style="display: block; font-size: clamp(30px, 4vw, 60px); font-weight: 600; color: rgba(15, 23, 42, 0.15); text-transform: uppercase;">Design</span>
-              <p style="max-width: 300px; margin-left: auto; margin-top: 1rem; color: var(--text-secondary); font-size: 1rem; text-align: right; opacity: 0.8;">Building foundational architecture for durable market leadership.</p>
+              <p style="margin-left: auto; margin-top: 1rem; color: var(--text-secondary); font-size: 1rem; text-align: right; opacity: 0.8;">Building foundational architecture for durable market leadership.</p>
             </div>
             
             <div class="card" style="width: 100%; max-width: 550px; position: relative; z-index: 1; background: rgba(255,255,255,0.8); backdrop-filter: blur(12px);">
@@ -44,12 +44,12 @@ export function renderFramework() {
           </div>
 
           <!-- Pillar 2 -->
-          <div class="horizontal-panel" style="width: 850px; flex-shrink: 0;">
+          <div class="horizontal-panel" style="width: 950px; flex-shrink: 0; padding-right: 400px;">
             <!-- Huge Background Text (Right Side) -->
-            <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); text-align: right; pointer-events: none; z-index: 0;">
+            <div style="position: absolute; right: 50px; top: 50%; transform: translateY(-50%); text-align: right; pointer-events: none; z-index: 0; width: 350px;">
               <span style="display: block; font-size: clamp(100px, 15vw, 250px); font-weight: 800; color: rgba(15, 23, 42, 0.05); line-height: 0.8; letter-spacing: -0.02em;">02</span>
               <span style="display: block; font-size: clamp(30px, 4vw, 60px); font-weight: 600; color: rgba(15, 23, 42, 0.15); text-transform: uppercase;">Acquire</span>
-              <p style="max-width: 300px; margin-left: auto; margin-top: 1rem; color: var(--text-secondary); font-size: 1rem; text-align: right; opacity: 0.8;">Strategic elevation of high-potential assets through integration.</p>
+              <p style="margin-left: auto; margin-top: 1rem; color: var(--text-secondary); font-size: 1rem; text-align: right; opacity: 0.8;">Strategic elevation of high-potential assets through integration.</p>
             </div>
 
             <div class="card" style="width: 100%; max-width: 550px; position: relative; z-index: 1; background: rgba(255,255,255,0.8); backdrop-filter: blur(12px);">
@@ -71,12 +71,12 @@ export function renderFramework() {
           </div>
 
           <!-- Pillar 3 -->
-          <div class="horizontal-panel" style="width: 850px; flex-shrink: 0;">
+          <div class="horizontal-panel" style="width: 950px; flex-shrink: 0; padding-right: 400px;">
             <!-- Huge Background Text (Right Side) -->
-            <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); text-align: right; pointer-events: none; z-index: 0;">
+            <div style="position: absolute; right: 50px; top: 50%; transform: translateY(-50%); text-align: right; pointer-events: none; z-index: 0; width: 350px;">
               <span style="display: block; font-size: clamp(100px, 15vw, 250px); font-weight: 800; color: rgba(15, 23, 42, 0.05); line-height: 0.8; letter-spacing: -0.02em;">03</span>
               <span style="display: block; font-size: clamp(30px, 4vw, 60px); font-weight: 600; color: rgba(15, 23, 42, 0.15); text-transform: uppercase;">Scale</span>
-              <p style="max-width: 300px; margin-left: auto; margin-top: 1rem; color: var(--text-secondary); font-size: 1rem; text-align: right; opacity: 0.8;">Embedding deliberate governance and scalable systems for endurance.</p>
+              <p style="margin-left: auto; margin-top: 1rem; color: var(--text-secondary); font-size: 1rem; text-align: right; opacity: 0.8;">Embedding deliberate governance and scalable systems for endurance.</p>
             </div>
 
             <div class="card" style="width: 100%; max-width: 550px; position: relative; z-index: 1; background: rgba(255,255,255,0.8); backdrop-filter: blur(12px);">
