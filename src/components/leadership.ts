@@ -1,9 +1,9 @@
 export function renderLeadership() {
-    return `
+  return `
     <section class="hero fade-in" style="padding-top: 15vh; padding-bottom: 10vh;">
       <div class="container">
-        <h2 class="micro-heading" data-i18n="leadership_kicker">Leadership</h2>
-        <h1 data-i18n="leadership_headline" style="max-width: 900px; margin-bottom: 2rem;">MT & MNA Ventures is led by strategists and operators with experience across venture development, enterprise structuring, capital markets, and global positioning.</h1>
+        <h1 data-i18n="leadership_kicker" style="margin-bottom: 1rem;">Leadership</h1>
+        <h2 data-i18n="leadership_headline" style="max-width: 900px; margin-bottom: 2rem; font-size: clamp(24px, 3vw, 32px); font-weight: 400; color: var(--text-secondary); text-transform: none; letter-spacing: 0;">MT & MNA Ventures is led by strategists and operators with experience across venture development, enterprise structuring, capital markets, and global positioning.</h2>
         
         <p style="margin-top: 4rem; color: var(--text-primary); font-size: 1.1rem;" data-i18n="leadership_phil_intro">Leadership philosophy emphasizes:</p>
         <ul style="margin-bottom: 4rem;">

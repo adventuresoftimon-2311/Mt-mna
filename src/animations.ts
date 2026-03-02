@@ -36,8 +36,7 @@ export function initGlobalAnimations() {
     // Expose lenis for global use if needed
     (window as any).lenis = lenis;
 
-    // Custom Cursor
-    initCustomCursor();
+    // Custom Cursor removed for V3
 
     // Scroll triggers for reveals
     initMaskedReveals();
@@ -156,61 +155,7 @@ function initFrameworkHorizontalScroll() {
     });
 }
 
-function initCustomCursor() {
-    if (window.matchMedia("(pointer: coarse)").matches) return; // Disable on touch
 
-    document.body.style.cursor = 'none';
-
-    const dot = document.createElement('div');
-    const ring = document.createElement('div');
-
-    dot.className = 'custom-cursor-dot';
-    ring.className = 'custom-cursor-ring';
-
-    document.body.appendChild(dot);
-    document.body.appendChild(ring);
-
-    gsap.set([dot, ring], { xPercent: -50, yPercent: -50 });
-
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
-    let ringX = mouseX;
-    let ringY = mouseY;
-    let isHovering = false;
-
-    window.addEventListener('mousemove', (e: any) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    document.body.addEventListener('mouseover', (e: any) => {
-        const target = e.target as HTMLElement;
-        if (target.closest('a') || target.closest('button') || target.closest('.interactive')) {
-            isHovering = true;
-        }
-    });
-
-    document.body.addEventListener('mouseout', (e: any) => {
-        const target = e.target as HTMLElement;
-        if (target.closest('a') || target.closest('button') || target.closest('.interactive')) {
-            isHovering = false;
-        }
-    });
-
-    gsap.ticker.add(() => {
-        // Dot follows instantly
-        gsap.set(dot, { x: mouseX, y: mouseY });
-
-        // Ring lerps
-        ringX += (mouseX - ringX) * 0.12;
-        ringY += (mouseY - ringY) * 0.12;
-
-        // Scale ring on hover
-        const scale = isHovering ? 2.5 : 1;
-
-        gsap.set(ring, { x: ringX, y: ringY, scale: scale });
-    });
-}
 
 export function initMaskedReveals() {
     const masks = gsap.utils.toArray('.mask-reveal');
