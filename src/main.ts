@@ -3,9 +3,9 @@ import { initI18n, switchLanguage, applyTranslations } from './i18n'
 import { initGlobalAnimations, runPageAnimations } from './animations'
 import { renderHeader } from './components/header'
 import { renderHero } from './components/hero'
+import { renderCompanies } from './components/companies'
 import { renderMandate } from './components/mandate'
 import { renderFramework } from './components/framework'
-import { renderPlatform } from './components/platform'
 import { renderPerspective } from './components/perspective'
 import { renderVision } from './components/vision'
 import { renderFooter } from './components/footer'
@@ -20,7 +20,7 @@ import { renderAdmin, bindAdminEvents } from './components/admin'
 import { renderBlogSection } from './components/blog'
 
 const routes: Record<string, () => string> = {
-  'home': () => renderHero() + renderMandate() + renderFramework() + renderBlogSection() + renderPlatform() + renderPerspective() + renderVision(),
+  'home': () => renderHero() + renderCompanies() + renderMandate() + renderFramework() + renderBlogSection() + renderPerspective() + renderVision(),
   'about': renderAbout,
   'what-we-do': renderWhatWeDo,
   'portfolio': renderPortfolio,

@@ -125,33 +125,40 @@ function initHomeAnimations() {
         );
     }
 
-    // 6. Init Horizontal Scroll for Framework
-    initFrameworkHorizontalScroll();
+    // 6. Init 3D Parallax on Company Tiles
+    initCompanyTilesParallax();
 }
 
-function initFrameworkHorizontalScroll() {
-    // Only apply on desktop
+function initCompanyTilesParallax() {
     if (window.matchMedia("(max-width: 768px)").matches) return;
 
-    const container = document.getElementById('framework-scroll-container');
-    const wrapper = document.getElementById('framework-scroll-wrapper');
-    const panels = gsap.utils.toArray('.horizontal-panel');
+    const tiles = document.querySelectorAll('.company-tile');
 
-    if (!container || !wrapper || panels.length === 0) return;
+    tiles.forEach((tile: any) => {
+        const title = tile.querySelector('.company-title');
+        if (!title) return;
 
-    const getScrollAmount = () => -(wrapper.scrollWidth - window.innerWidth);
+        tile.addEventListener('mousemove', (e: MouseEvent) => {
+            const rect = tile.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+            const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
 
-    gsap.to(wrapper, {
-        x: getScrollAmount,
-        ease: "none",
-        scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            pin: true,
-            scrub: 1,
-            end: () => `+=${wrapper.scrollWidth - window.innerWidth}`,
-            invalidateOnRefresh: true,
-        }
+            gsap.to(title, {
+                x: x * 15,
+                y: y * 15,
+                duration: 0.4,
+                ease: 'power2.out'
+            });
+        });
+
+        tile.addEventListener('mouseleave', () => {
+            gsap.to(title, {
+                x: 0,
+                y: 0,
+                duration: 0.7,
+                ease: 'elastic.out(1, 0.3)'
+            });
+        });
     });
 }
 
