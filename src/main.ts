@@ -18,6 +18,8 @@ import { renderContact } from './components/contact'
 
 import { renderAdmin, bindAdminEvents } from './components/admin'
 import { renderBlogSection } from './components/blog'
+import { renderModal, bindModalEvents } from './components/modal'
+import { renderTool, bindToolEvents } from './components/tool'
 
 const routes: Record<string, () => string> = {
   'home': () => renderHero() + renderCompanies() + renderMandate() + renderFramework() + renderBlogSection() + renderPerspective() + renderVision(),
@@ -27,6 +29,7 @@ const routes: Record<string, () => string> = {
   'leadership': renderLeadership,
   'contact': renderContact,
   'admin': renderAdmin,
+  'tool': renderTool,
 };
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -35,12 +38,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <main id="main-content">
       ${routes['home']()}
     </main>
+    ${renderModal()}
     ${renderFooter()}
   </div>
 `
 
 initI18n();
 initGlobalAnimations();
+bindModalEvents();
 
 // Sticky Header Logic
 const header = document.getElementById('main-header');
@@ -68,27 +73,37 @@ if (header && logo) {
 const mainContent = document.getElementById('main-content');
 const navItems = document.querySelectorAll('.nav-item');
 
+(window as any).navigateTo = (page: string) => {
+  if (page && routes[page] && mainContent) {
+    const renderCurrentRoute = () => {
+      mainContent.innerHTML = routes[page]();
+      applyTranslations();
+      runPageAnimations(page);
+
+      if (page === 'admin') {
+        bindAdminEvents(renderCurrentRoute);
+      }
+      if (page === 'tool') {
+        bindToolEvents();
+      }
+    };
+
+    renderCurrentRoute();
+    window.scrollTo({ top: 0, behavior: 'auto' });
+
+    // Update active nav state
+    navItems.forEach(nav => nav.classList.remove('active'));
+    // Find and select the active nav if it exists, otherwise leave all unselected
+    document.querySelectorAll(`.nav-item[data-page="${page}"]`).forEach(el => el.classList.add('active'));
+  }
+};
+
 navItems.forEach(item => {
   item.addEventListener('click', (e) => {
     e.preventDefault();
     const page = (e.currentTarget as HTMLElement).dataset.page;
-    if (page && routes[page] && mainContent) {
-      const renderCurrentRoute = () => {
-        mainContent.innerHTML = routes[page]();
-        applyTranslations();
-        runPageAnimations(page);
-
-        if (page === 'admin') {
-          bindAdminEvents(renderCurrentRoute);
-        }
-      };
-
-      renderCurrentRoute();
-      window.scrollTo({ top: 0, behavior: 'auto' });
-
-      // Update active nav state
-      navItems.forEach(nav => nav.classList.remove('active'));
-      (e.currentTarget as HTMLElement).classList.add('active');
+    if (page) {
+      (window as any).navigateTo(page);
     }
   });
 });
