@@ -25,15 +25,15 @@ export function renderContact() {
           <div>
             <div class="card" style="padding: 3rem; background: var(--secondary-bg);">
               <form class="contact-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
-                <input type="text" data-i18n="form_name" placeholder="Name" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary); font-family: 'Inter', sans-serif;">
-                <input type="text" data-i18n="form_company" placeholder="Company" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary); font-family: 'Inter', sans-serif;">
+                <input type="text" data-i18n="form_name" placeholder="Name" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary);">
+                <input type="text" data-i18n="form_company" placeholder="Company" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary);">
                 <div style="display: flex; gap: 1.5rem;">
-                  <input type="text" data-i18n="form_position" placeholder="Position" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary); font-family: 'Inter', sans-serif;">
-                  <input type="text" data-i18n="form_institution" placeholder="Institution" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary); font-family: 'Inter', sans-serif;">
+                  <input type="text" data-i18n="form_position" placeholder="Position" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary);">
+                  <input type="text" data-i18n="form_institution" placeholder="Institution" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary);">
                 </div>
-                <textarea data-i18n="form_message" placeholder="Message" rows="5" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary); font-family: 'Inter', sans-serif; resize: none;"></textarea>
+                <textarea data-i18n="form_message" placeholder="Message" rows="5" style="width: 100%; padding: 1rem; background: var(--primary-bg); border: 1px solid var(--divider); color: var(--text-primary); resize: none;"></textarea>
                 <div style="text-align: right; margin-top: 1rem;">
-                  <button type="submit" data-i18n="form_submit" style="background: transparent; border: 1px solid var(--accent-blue); color: var(--text-primary); padding: 1rem 3rem; text-transform: uppercase; letter-spacing: 0.1em; font-family: 'Inter', sans-serif; cursor: pointer; transition: all 0.3s ease;">Submit</button>
+                  <button type="submit" data-i18n="form_submit" style="background: transparent; border: 1px solid var(--accent-blue); color: var(--text-primary); padding: 1rem 3rem; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; transition: all 0.3s ease;">Submit</button>
                 </div>
               </form>
             </div>

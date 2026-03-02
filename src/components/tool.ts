@@ -1,5 +1,5 @@
 export function renderTool() {
-    return `
+  return `
     <!-- Audio Element -->
     <audio id="ambient-audio" loop src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" preload="auto"></audio>
 
@@ -30,7 +30,7 @@ export function renderTool() {
             </video>
             <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,23,42,0.1) 0%, rgba(15,23,42,0.8) 100%); z-index: 1;"></div>
             <div style="position: absolute; bottom: 2rem; left: 2rem; z-index: 2; color: white;">
-               <span style="display: block; font-size: 0.85rem; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem; font-family: monospace;">01.</span>
+               <span style="display: block; font-size: 0.85rem; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem;">01.</span>
                <h3 style="font-size: 1.5rem; text-transform: uppercase; margin: 0; letter-spacing: 0.05em; font-weight: 500;">Upload</h3>
             </div>
           </div>
@@ -42,7 +42,7 @@ export function renderTool() {
             </video>
             <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,23,42,0.1) 0%, rgba(15,23,42,0.8) 100%); z-index: 1;"></div>
             <div style="position: absolute; bottom: 2rem; left: 2rem; z-index: 2; color: white;">
-               <span style="display: block; font-size: 0.85rem; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem; font-family: monospace;">02.</span>
+               <span style="display: block; font-size: 0.85rem; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem;">02.</span>
                <h3 style="font-size: 1.5rem; text-transform: uppercase; margin: 0; letter-spacing: 0.05em; font-weight: 500;">Scan</h3>
             </div>
           </div>
@@ -54,7 +54,7 @@ export function renderTool() {
             </video>
             <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,23,42,0.1) 0%, rgba(15,23,42,0.8) 100%); z-index: 1;"></div>
             <div style="position: absolute; bottom: 2rem; left: 2rem; z-index: 2; color: white;">
-               <span style="display: block; font-size: 0.85rem; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem; font-family: monospace;">03.</span>
+               <span style="display: block; font-size: 0.85rem; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem;">03.</span>
                <h3 style="font-size: 1.5rem; text-transform: uppercase; margin: 0; letter-spacing: 0.05em; font-weight: 500;">Match</h3>
             </div>
           </div>
@@ -66,7 +66,7 @@ export function renderTool() {
             </video>
             <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,23,42,0.1) 0%, rgba(15,23,42,0.8) 100%); z-index: 1;"></div>
             <div style="position: absolute; bottom: 2rem; left: 2rem; z-index: 2; color: white;">
-               <span style="display: block; font-size: 0.85rem; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem; font-family: monospace;">04.</span>
+               <span style="display: block; font-size: 0.85rem; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem;">04.</span>
                <h3 style="font-size: 1.5rem; text-transform: uppercase; margin: 0; letter-spacing: 0.05em; font-weight: 500;">Evidence</h3>
             </div>
           </div>
@@ -78,23 +78,23 @@ export function renderTool() {
 }
 
 export function bindToolEvents() {
-    const audio = document.getElementById('ambient-audio') as HTMLAudioElement;
-    const btn = document.getElementById('start-audio-btn');
+  const audio = document.getElementById('ambient-audio') as HTMLAudioElement;
+  const btn = document.getElementById('start-audio-btn');
 
-    if (audio && btn) {
-        audio.volume = 0.15; // soft subtle
-        btn.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play();
-                btn.textContent = "SYSTEM ACTIVE";
-                btn.style.background = "var(--accent-blue)";
-                btn.style.borderColor = "var(--accent-blue)";
-            } else {
-                audio.pause();
-                btn.textContent = "INITIALIZE SYSTEM";
-                btn.style.background = "transparent";
-                btn.style.borderColor = "rgba(255,255,255,0.3)";
-            }
-        });
-    }
+  if (audio && btn) {
+    audio.volume = 0.15; // soft subtle
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = "SYSTEM ACTIVE";
+        btn.style.background = "var(--accent-blue)";
+        btn.style.borderColor = "var(--accent-blue)";
+      } else {
+        audio.pause();
+        btn.textContent = "INITIALIZE SYSTEM";
+        btn.style.background = "transparent";
+        btn.style.borderColor = "rgba(255,255,255,0.3)";
+      }
+    });
+  }
 }

@@ -82,16 +82,51 @@ section {
 }
 
 .card {
-  background: var(--card-bg);
-  border: 1px solid var(--divider);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 2.5rem;
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
     border-color 0.4s ease,
     box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   border-radius: 0;
-  /* V3 Pivot: Strict sharp geometry */
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  /* Deep static presence shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, transparent 40%, rgba(255, 255, 255, 0.8) 50%, transparent 60%, transparent 100%);
+  transform: skewX(-20deg);
+  animation: liquidGlassTileShine 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes liquidGlassTileShine {
+  0% {
+    left: -150%;
+  }
+
+  50% {
+    left: 150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+.card>* {
+  position: relative;
+  z-index: 2;
 }
 
 .card:hover {
