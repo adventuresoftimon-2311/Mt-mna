@@ -1,25 +1,25 @@
 export interface BlogPost {
   id: string;
   title: string;
-  videoUrl: string;
+  imageUrl: string;
   content: string;
   date: string;
 }
 
 export function getBlogPosts(): BlogPost[] {
-  const data = localStorage.getItem('mt_mna_blog_posts');
+  const data = localStorage.getItem('mt_mna_insights_v2');
   if (!data) {
     // Seed an example article if none exist
     const seed: BlogPost[] = [
       {
         id: '1',
         title: 'The Future of Enterprise Architecture',
-        videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-global-network-connection-in-the-world-21019-large.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
         content: 'Structural clarity is no longer an advantage; it is a necessity. Enterprises that endure are those built on foundation, not momentum. Our latest insights delve into the engineering of durable capital and governance systems.',
         date: new Date().toISOString()
       }
     ];
-    localStorage.setItem('mt_mna_blog_posts', JSON.stringify(seed));
+    localStorage.setItem('mt_mna_insights_v2', JSON.stringify(seed));
     return seed;
   }
   return JSON.parse(data);
@@ -28,13 +28,13 @@ export function getBlogPosts(): BlogPost[] {
 export function saveBlogPost(post: BlogPost) {
   const posts = getBlogPosts();
   posts.unshift(post);
-  localStorage.setItem('mt_mna_blog_posts', JSON.stringify(posts));
+  localStorage.setItem('mt_mna_insights_v2', JSON.stringify(posts));
 }
 
 export function deleteBlogPost(id: string) {
   let posts = getBlogPosts();
   posts = posts.filter(p => p.id !== id);
-  localStorage.setItem('mt_mna_blog_posts', JSON.stringify(posts));
+  localStorage.setItem('mt_mna_insights_v2', JSON.stringify(posts));
 }
 
 let isAuthenticated = false;
@@ -79,7 +79,7 @@ export function renderAdmin() {
           <h3 style="margin-bottom: 1.5rem;">Issue New Insight</h3>
           <form id="add-post-form" style="display: flex; flex-direction: column; gap: 1rem;">
             <input type="text" id="post-title" placeholder="Article Title" style="padding: 1rem; border: 1px solid var(--divider); background: var(--primary-bg); color: var(--text-primary); border-radius: 12px; outline: none;" required>
-            <input type="url" id="post-video" placeholder="Background Video URL (MP4)" style="padding: 1rem; border: 1px solid var(--divider); background: var(--primary-bg); color: var(--text-primary); border-radius: 12px; outline: none;" required>
+            <input type="url" id="post-image" placeholder="Background Image URL" style="padding: 1rem; border: 1px solid var(--divider); background: var(--primary-bg); color: var(--text-primary); border-radius: 12px; outline: none;" required>
             <textarea id="post-content" placeholder="Content Body..." rows="5" style="padding: 1rem; border: 1px solid var(--divider); background: var(--primary-bg); color: var(--text-primary); border-radius: 12px; outline: none; resize: vertical;" required></textarea>
             <button type="submit" style="padding: 1rem; background: var(--text-primary); color: var(--primary-bg); border: none; font-size: 1rem; font-weight: 600; text-transform: uppercase; cursor: pointer; transition: opacity 0.3s; margin-top: 1rem; border-radius: 12px;">Publish Article</button>
           </form>
@@ -126,13 +126,13 @@ export function bindAdminEvents(reRender: () => void) {
       addForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const title = (document.getElementById('post-title') as HTMLInputElement).value;
-        const videoUrl = (document.getElementById('post-video') as HTMLInputElement).value;
+        const imageUrl = (document.getElementById('post-image') as HTMLInputElement).value;
         const content = (document.getElementById('post-content') as HTMLTextAreaElement).value;
 
         saveBlogPost({
           id: Date.now().toString(),
           title,
-          videoUrl,
+          imageUrl,
           content,
           date: new Date().toISOString()
         });

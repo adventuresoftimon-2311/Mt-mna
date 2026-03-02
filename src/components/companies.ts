@@ -1,14 +1,14 @@
 export function renderCompanies() {
-    return `
+  return `
     <section class="companies-section fade-in" style="padding: 10vh 0; background-color: var(--secondary-bg);">
       <div class="container" style="max-width: 1400px;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
           
           <!-- United Creatives -->
-          <div class="company-tile" style="position: relative; overflow: hidden; aspect-ratio: 9/16; cursor: pointer; border: none; box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);">
-            <video autoPlay loop muted playsInline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.4) contrast(1.2);">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-connection-background-22646-large.mp4" type="video/mp4" />
-            </video>
+          <div class="card company-tile" style="position: relative; overflow: hidden; aspect-ratio: 9/16; cursor: pointer; padding: 0;">
+            <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt="United Creatives" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) contrast(1.2);" class="hover-alive">
+            </div>
             <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0) 50%, rgba(15,23,42,0.8) 100%); z-index: 1; pointer-events: none;"></div>
             
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; display: flex; align-items: center; justify-content: center; pointer-events: none;">
@@ -17,10 +17,10 @@ export function renderCompanies() {
           </div>
 
           <!-- United Law -->
-          <div class="company-tile" style="position: relative; overflow: hidden; aspect-ratio: 9/16; cursor: pointer; border: none; box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);">
-            <video autoPlay loop muted playsInline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.4) contrast(1.2);">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-global-network-connection-in-the-world-21019-large.mp4" type="video/mp4" />
-            </video>
+          <div class="card company-tile" style="position: relative; overflow: hidden; aspect-ratio: 9/16; cursor: pointer; padding: 0;">
+            <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=600" alt="United Law" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) contrast(1.2);" class="hover-alive">
+            </div>
             <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0) 50%, rgba(15,23,42,0.8) 100%); z-index: 1; pointer-events: none;"></div>
             
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; display: flex; align-items: center; justify-content: center; pointer-events: none;">
@@ -29,10 +29,10 @@ export function renderCompanies() {
           </div>
 
           <!-- OTC Tech -->
-          <div class="company-tile" style="position: relative; overflow: hidden; aspect-ratio: 9/16; cursor: pointer; border: none; box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);">
-            <video autoPlay loop muted playsInline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.4) contrast(1.2);">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-hologram-of-a-planet-in-a-cyber-world-41619-large.mp4" type="video/mp4" />
-            </video>
+          <div class="card company-tile" style="position: relative; overflow: hidden; aspect-ratio: 9/16; cursor: pointer; padding: 0;">
+            <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600" alt="OTC Tech" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6) contrast(1.2);" class="hover-alive">
+            </div>
             <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0) 50%, rgba(15,23,42,0.8) 100%); z-index: 1; pointer-events: none;"></div>
             
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; display: flex; align-items: center; justify-content: center; pointer-events: none;">

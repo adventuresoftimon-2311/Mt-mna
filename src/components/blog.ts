@@ -1,15 +1,15 @@
 import { getBlogPosts } from './admin';
 
 export function renderBlogSection() {
-    const posts = getBlogPosts();
+  const posts = getBlogPosts();
 
-    if (posts.length === 0) return '';
+  if (posts.length === 0) return '';
 
-    const postsHtml = posts.map(post => `
-    <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; min-height: 400px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; border: none;">
-      <video autoPlay loop muted playsInline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.5) contrast(1.1);">
-        <source src="${post.videoUrl}" type="video/mp4" />
-      </video>
+  const postsHtml = posts.map(post => `
+    <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; min-height: 400px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer;">
+      <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+        <img src="${post.imageUrl}" alt="${post.title}" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5) contrast(1.1);" class="hover-alive">
+      </div>
       <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.9) 100%); z-index: 1;"></div>
       
       <div style="position: relative; z-index: 2; padding: 2.5rem; text-align: left;">
@@ -20,7 +20,7 @@ export function renderBlogSection() {
     </div>
   `).join('');
 
-    return `
+  return `
     <section class="insights-section" style="padding-top: 50px;">
       <div class="container">
         <h2 class="micro-heading" style="text-align: center; margin-bottom: 3rem;">Market Insights & Observations</h2>
