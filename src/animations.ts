@@ -134,9 +134,12 @@ function initHomeAnimations() {
 
 function initHeroFullscreen() {
     const heroSection = document.querySelector('.hero');
-    const heroVideo = document.querySelector('.hero-video') as HTMLVideoElement;
+    const heroVideo = document.getElementById('main-hero-video') as HTMLVideoElement;
 
     if (!heroSection || !heroVideo) return;
+
+    // Apply custom playback speed for the hero video
+    heroVideo.playbackRate = 0.75;
 
     heroSection.addEventListener('click', () => {
         if (heroVideo.requestFullscreen) {
