@@ -24,7 +24,7 @@ export function renderTool() {
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
           
           <!-- Step 1 -->
-          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 4/5; border: none; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15); border-radius: 24px;">
+          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 4/5;">
             <video autoPlay loop muted playsInline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6);">
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-connection-background-22646-large.mp4" type="video/mp4" />
             </video>
@@ -36,7 +36,7 @@ export function renderTool() {
           </div>
 
           <!-- Step 2 -->
-          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 4/5; border: none; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15); border-radius: 24px;">
+          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 4/5;">
             <video autoPlay loop muted playsInline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6);">
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-global-network-connection-in-the-world-21019-large.mp4" type="video/mp4" />
             </video>
@@ -48,7 +48,7 @@ export function renderTool() {
           </div>
 
           <!-- Step 3 -->
-          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 4/5; border: none; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15); border-radius: 24px;">
+          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 4/5;">
             <video autoPlay loop muted playsInline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6);">
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-tech-house-vibes-130-large.mp4" type="video/mp4" />
             </video>
@@ -60,7 +60,7 @@ export function renderTool() {
           </div>
 
           <!-- Step 4 -->
-          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 4/5; border: none; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15); border-radius: 24px;">
+          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 4/5;">
             <video autoPlay loop muted playsInline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6);">
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-data-center-server-racks-21045-large.mp4" type="video/mp4" />
             </video>

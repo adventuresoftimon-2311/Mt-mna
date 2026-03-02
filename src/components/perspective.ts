@@ -11,38 +11,38 @@ export function renderPerspective() {
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
           
           <!-- Tile 1 -->
-          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; border: none; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);">
-            <video autoPlay loop muted playsInline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.6);">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-global-network-connection-in-the-world-21019-large.mp4" type="video/mp4" />
-            </video>
-            <div style="position: absolute; inset: 0; background: rgba(15,23,42,0.5); z-index: 1;"></div>
+          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600" alt="Clarity of Structure" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7);" class="hover-alive">
+            </div>
+            <div style="position: absolute; inset: 0; background: rgba(15,23,42,0.4); z-index: 1;"></div>
             <h3 data-i18n="perspective_l1" style="position: relative; z-index: 2; color: #FFFFFF; text-align: center; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 0 1rem; margin: 0; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">Clarity of structure</h3>
           </div>
 
           <!-- Tile 2 -->
-          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; border: none; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);">
-            <video autoPlay loop muted playsInline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.6);">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-global-network-connection-in-the-world-21019-large.mp4" type="video/mp4" />
-            </video>
-            <div style="position: absolute; inset: 0; background: rgba(15,23,42,0.5); z-index: 1;"></div>
+          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600" alt="Technological Integration" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7);" class="hover-alive">
+            </div>
+            <div style="position: absolute; inset: 0; background: rgba(15,23,42,0.4); z-index: 1;"></div>
             <h3 data-i18n="perspective_l2" style="position: relative; z-index: 2; color: #FFFFFF; text-align: center; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 0 1rem; margin: 0; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">Technological integration</h3>
           </div>
 
           <!-- Tile 3 -->
-          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; border: none; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);">
-            <video autoPlay loop muted playsInline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.6);">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-global-network-connection-in-the-world-21019-large.mp4" type="video/mp4" />
-            </video>
-            <div style="position: absolute; inset: 0; background: rgba(15,23,42,0.5); z-index: 1;"></div>
+          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1541888009714-d41f02c632e8?auto=format&fit=crop&q=80&w=600" alt="Institutional Readiness" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7);" class="hover-alive">
+            </div>
+            <div style="position: absolute; inset: 0; background: rgba(15,23,42,0.4); z-index: 1;"></div>
             <h3 data-i18n="perspective_l3" style="position: relative; z-index: 2; color: #FFFFFF; text-align: center; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 0 1rem; margin: 0; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">Institutional readiness</h3>
           </div>
 
           <!-- Tile 4 -->
-          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; border: none; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);">
-            <video autoPlay loop muted playsInline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.6);">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-global-network-connection-in-the-world-21019-large.mp4" type="video/mp4" />
-            </video>
-            <div style="position: absolute; inset: 0; background: rgba(15,23,42,0.5); z-index: 1;"></div>
+          <div class="card product-tile" style="position: relative; overflow: hidden; padding: 0; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=600" alt="Strategic Foresight" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7);" class="hover-alive">
+            </div>
+            <div style="position: absolute; inset: 0; background: rgba(15,23,42,0.4); z-index: 1;"></div>
             <h3 data-i18n="perspective_l4" style="position: relative; z-index: 2; color: #FFFFFF; text-align: center; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 0 1rem; margin: 0; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">Strategic foresight</h3>
           </div>
 
