@@ -16,7 +16,7 @@ export function renderModal() {
                 <div style="position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem;">
                     <h2 id="modal-title" style="color: white; font-size: clamp(32px, 5vw, 64px); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2rem; text-shadow: 0 10px 30px rgba(0,0,0,0.8);">Company Name</h2>
                     <p id="modal-desc" style="color: rgba(255,255,255,0.8); font-size: 1.2rem; max-width: 600px; margin-bottom: 4rem; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Strategic capability overview and structural integration details.</p>
-                    <button id="modal-cta-btn" class="btn-primary flex-center" style="background: white; color: black; border: none; padding: 1rem 3rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; cursor: pointer; box-shadow: 0 10px 30px rgba(255,255,255,0.2); border-radius: 100px;">Explore Architecture</button>
+                    <button id="modal-cta-btn" class="btn-primary flex-center" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.2); color: #ffffff; padding: 1rem 3rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: 100px; transition: transform 0.3s ease, background 0.3s ease;">Explore Architecture</button>
                 </div>
             </div>
         </div>
