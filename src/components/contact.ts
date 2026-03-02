@@ -1,11 +1,11 @@
 export function renderContact() {
-    return `
+  return `
     <section class="hero fade-in" style="padding-top: 15vh; padding-bottom: 10vh;">
       <div class="container">
         <h2 class="micro-heading" data-i18n="contact_kicker">Strategic Inquiries</h2>
         <div class="grid-2">
           <div>
-            <h1 data-i18n="contact_headline" style="max-width: 600px; margin-bottom: 2rem;">MT & MNA Ventures engages selectively with founders, operators, institutional partners, and aligned enterprises.</h1>
+        <h1 data-i18n="contact_headline" style="max-width: 600px; margin-bottom: 2rem; font-size: clamp(24px, 3vw, 32px); font-weight: 400; line-height: 1.4;">MT & MNA Ventures engages selectively with founders, operators, institutional partners, and aligned enterprises.</h1>
             
             <div style="margin-top: 4rem;">
               <span style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 1rem;" data-i18n="contact_locations_label">Locations</span>
