@@ -16,13 +16,17 @@ import { renderPortfolio } from './components/portfolio'
 import { renderLeadership } from './components/leadership'
 import { renderContact } from './components/contact'
 
+import { renderAdmin, bindAdminEvents } from './components/admin'
+import { renderBlogSection } from './components/blog'
+
 const routes: Record<string, () => string> = {
-  'home': () => renderHero() + renderMandate() + renderFramework() + renderPlatform() + renderPerspective() + renderVision(),
+  'home': () => renderHero() + renderMandate() + renderFramework() + renderBlogSection() + renderPlatform() + renderPerspective() + renderVision(),
   'about': renderAbout,
   'what-we-do': renderWhatWeDo,
   'portfolio': renderPortfolio,
   'leadership': renderLeadership,
   'contact': renderContact,
+  'admin': renderAdmin,
 };
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -69,10 +73,18 @@ navItems.forEach(item => {
     e.preventDefault();
     const page = (e.currentTarget as HTMLElement).dataset.page;
     if (page && routes[page] && mainContent) {
-      mainContent.innerHTML = routes[page]();
+      const renderCurrentRoute = () => {
+        mainContent.innerHTML = routes[page]();
+        applyTranslations();
+        runPageAnimations(page);
+
+        if (page === 'admin') {
+          bindAdminEvents(renderCurrentRoute);
+        }
+      };
+
+      renderCurrentRoute();
       window.scrollTo({ top: 0, behavior: 'auto' });
-      applyTranslations();
-      runPageAnimations(page);
 
       // Update active nav state
       navItems.forEach(nav => nav.classList.remove('active'));
@@ -82,6 +94,7 @@ navItems.forEach(item => {
 });
 
 // Run initial animations for home
+mainContent!.innerHTML = routes['home']();
 runPageAnimations('home');
 
 // Bind language switcher events
