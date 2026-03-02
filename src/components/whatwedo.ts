@@ -7,7 +7,7 @@ export function renderWhatWeDo() {
         
         <div class="grid-2">
           <!-- Origination -->
-          <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 0; box-shadow: none;">
+          <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 24px; box-shadow: none;">
             <h3 data-i18n="wwd_origination_title">Enterprise Origination</h3>
             <p data-i18n="wwd_origination_p1" style="color: var(--text-primary)">We design enterprises in sectors aligned with structural and technological evolution.</p>
             <div class="expandable-wrapper">
@@ -19,7 +19,7 @@ export function renderWhatWeDo() {
           </div>
           
           <!-- Acquisition -->
-          <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 0; box-shadow: none;">
+          <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 24px; box-shadow: none;">
              <h3 data-i18n="wwd_acquisition_title">Strategic Acquisition</h3>
              <p data-i18n="wwd_acquisition_p1" style="color: var(--text-primary)">We identify companies with strong foundations and untapped structural potential.</p>
              <div class="expandable-wrapper">
@@ -31,7 +31,7 @@ export function renderWhatWeDo() {
           </div>
           
           <!-- Capital -->
-          <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 0; box-shadow: none;">
+          <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 24px; box-shadow: none;">
              <h3 data-i18n="wwd_capital_title">Capital Alignment</h3>
              <p data-i18n="wwd_capital_p1" style="color: var(--text-primary)">We deploy capital selectively in alignment with structural readiness and long-term enterprise viability.</p>
              <div class="expandable-wrapper">
@@ -43,7 +43,7 @@ export function renderWhatWeDo() {
           </div>
           
           <!-- Infrastructure -->
-          <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 0; box-shadow: none;">
+          <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 24px; box-shadow: none;">
              <h3 data-i18n="wwd_infra_title">Infrastructure & Systems</h3>
              <p data-i18n="wwd_infra_p1" style="color: var(--text-primary)">Through internal capabilities and OTC Tech, we ensure every enterprise operates on a scalable, resilient foundation.</p>
              <div class="expandable-wrapper">
