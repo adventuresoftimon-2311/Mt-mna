@@ -127,6 +127,35 @@ function initHomeAnimations() {
 
     // 6. Init 3D Parallax on Company Tiles
     initCompanyTilesParallax();
+
+    // 7. Init Hero Fullscreen Video
+    initHeroFullscreen();
+}
+
+function initHeroFullscreen() {
+    const heroSection = document.querySelector('.hero');
+    const heroVideo = document.querySelector('.hero-video') as HTMLVideoElement;
+
+    if (!heroSection || !heroVideo) return;
+
+    heroSection.addEventListener('click', () => {
+        if (heroVideo.requestFullscreen) {
+            heroVideo.requestFullscreen();
+        } else if ((heroVideo as any).webkitRequestFullscreen) {
+            (heroVideo as any).webkitRequestFullscreen();
+        } else if ((heroVideo as any).msRequestFullscreen) {
+            (heroVideo as any).msRequestFullscreen();
+        }
+    });
+
+    // Handle unmuting when entering fullscreen
+    document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement === heroVideo) {
+            heroVideo.muted = false;
+        } else {
+            heroVideo.muted = true;
+        }
+    });
 }
 
 function initCompanyTilesParallax() {
