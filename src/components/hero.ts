@@ -1,7 +1,7 @@
 export function renderHero() {
   return `
-    <section class="hero fade-in" style="height: 100vh; min-height: 800px; padding: 0; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; cursor: pointer;">
-      <video id="main-hero-video" class="hero-video" autoPlay loop muted playsInline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -20; filter: brightness(1) contrast(1.1);">
+    <section class="hero fade-in" style="height: 100vh; min-height: 800px; padding: 0; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center;">
+      <video id="main-hero-video" class="hero-video" autoPlay loop muted playsInline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -20; filter: brightness(1) contrast(1.1); pointer-events: none; user-select: none;">
         <source src="./2325093-hd_1920_1080_25fps.mp4" type="video/mp4" />
       </video>
       <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 100%); z-index: -10; pointer-events: none;"></div>

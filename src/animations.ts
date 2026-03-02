@@ -140,25 +140,6 @@ function initHeroFullscreen() {
 
     // Apply custom playback speed for the hero video
     heroVideo.playbackRate = 0.75;
-
-    heroSection.addEventListener('click', () => {
-        if (heroVideo.requestFullscreen) {
-            heroVideo.requestFullscreen();
-        } else if ((heroVideo as any).webkitRequestFullscreen) {
-            (heroVideo as any).webkitRequestFullscreen();
-        } else if ((heroVideo as any).msRequestFullscreen) {
-            (heroVideo as any).msRequestFullscreen();
-        }
-    });
-
-    // Handle unmuting when entering fullscreen
-    document.addEventListener('fullscreenchange', () => {
-        if (document.fullscreenElement === heroVideo) {
-            heroVideo.muted = false;
-        } else {
-            heroVideo.muted = true;
-        }
-    });
 }
 
 function initCompanyTilesParallax() {
