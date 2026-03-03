@@ -1,6 +1,6 @@
 export function renderVision() {
-    return `
-    <section class="alt-bg fade-in" style="animation-delay: 0.5s">
+  return `
+    <section class="alt-bg fade-in" style="animation-delay: 0.5s; background-color: #ffffff; position: relative; z-index: 10;">
       <div class="container">
         <span class="micro-heading" data-i18n="vision_kicker">Long-Term Vision</span>
         <h2 data-i18n="vision_headline" style="margin-bottom: 4rem; max-width: 1000px">MT & MNA Ventures is committed to building a globally respected enterprise platform defined by:</h2>

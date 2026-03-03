@@ -1,6 +1,6 @@
 export function renderMandate() {
   return `
-    <section class="alt-bg fade-in" style="animation-delay: 0.1s">
+    <section class="alt-bg fade-in" style="animation-delay: 0.1s; background-color: #ffffff; position: relative; z-index: 10;">
       <div class="container">
         <span class="micro-heading" data-i18n="mandate_kicker">Our Mandate</span>
         <h2 class="reveal-text" data-i18n="mandate_headline" style="margin-bottom: 3rem; max-width: 900px">We operate beyond capital deployment.<br/>We design enterprise architecture.</h2>

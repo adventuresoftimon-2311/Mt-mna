@@ -1,6 +1,6 @@
 export function renderFooter() {
-    return `
-    <footer style="padding: 4rem 0; border-top: 1px solid var(--divider); margin-top: 2rem">
+  return `
+    <footer style="padding: 4rem 0; margin-top: 2rem; position: relative; z-index: 100; border-top: 1px solid rgba(15, 23, 42, 0.05); background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
       <div class="container">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem">
           <div>
