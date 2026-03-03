@@ -7,9 +7,9 @@ export function renderPortfolio() {
         
         <div class="grid-2">
           <!-- United Creatives -->
-          <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-            <div style="height: 200px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="United Creatives Structure" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="hover-zoom">
+          <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);">
+            <div style="height: 200px; overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center;">
+                <video class="port-vid-uc" src="/united-creatives.mp4" muted playsInline preload="auto" style="width: 100%; height: 100%; object-fit: contain;"></video>
             </div>
             <div style="padding: 2.5rem;">
                 <h3 data-i18n="port_uc_title" style="margin-bottom: 0.5rem; font-size: 1.5rem;">United Creatives</h3>
@@ -19,9 +19,9 @@ export function renderPortfolio() {
           </div>
 
           <!-- United Law -->
-          <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-            <div style="height: 200px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80&w=800" alt="United Law Structure" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="hover-zoom">
+          <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);">
+            <div style="height: 200px; overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center;">
+                <video class="port-vid-ul" src="/united-law.mp4" muted playsInline preload="auto" style="width: 100%; height: 100%; object-fit: contain;"></video>
             </div>
             <div style="padding: 2.5rem;">
                 <h3 data-i18n="port_ul_title" style="margin-bottom: 0.5rem; font-size: 1.5rem;">United Law</h3>
@@ -31,9 +31,9 @@ export function renderPortfolio() {
           </div>
 
           <!-- OTC Tech -->
-          <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-            <div style="height: 200px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800" alt="OTC Tech Structure" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="hover-zoom">
+          <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);">
+            <div style="height: 200px; overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center;">
+                <video class="port-vid-otc" src="/otc-tech.mp4" muted playsInline preload="auto" style="width: 100%; height: 100%; object-fit: contain;"></video>
             </div>
             <div style="padding: 2.5rem;">
                 <h3 data-i18n="port_otc_title" style="margin-bottom: 0.5rem; font-size: 1.5rem;">OTC Tech</h3>
@@ -43,7 +43,7 @@ export function renderPortfolio() {
           </div>
 
           <!-- BRAENDZ -->
-          <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);">
             <div style="height: 200px; overflow: hidden;">
                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" alt="BRAENDZ Structure" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="hover-zoom">
             </div>

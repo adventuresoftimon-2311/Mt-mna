@@ -150,40 +150,43 @@ function initHeroFullscreen() {
 
 function initCompanyVideoLoops() {
     const vids = [
-        { id: '#vid-united-creatives', speed: 1.0 },
-        { id: '#vid-united-law', speed: 1.2 },
-        { id: '#vid-otc-tech', speed: 1.3 }
+        { selector: '#vid-united-creatives, .port-vid-uc', speed: 1.0 },
+        { selector: '#vid-united-law, .port-vid-ul', speed: 1.2 },
+        { selector: '#vid-otc-tech, .port-vid-otc', speed: 1.3 }
     ];
 
     vids.forEach(v => {
-        const video = document.querySelector(v.id) as HTMLVideoElement;
-        if (!video) return;
+        const videos = document.querySelectorAll(v.selector);
 
-        // Force pause native playback since GSAP will scrub it manually
-        video.pause();
+        videos.forEach((video: any) => {
+            if (!video) return;
 
-        const startAnimation = () => {
-            const actualDuration = video.duration || 5.03;
-            // Adjust the time it takes to complete one forward sequence by the speed factor
-            const tweenDuration = actualDuration / v.speed;
+            // Force pause native playback since GSAP will scrub it manually
+            video.pause();
 
-            gsap.fromTo(video,
-                { currentTime: 0 },
-                {
-                    currentTime: actualDuration - 0.05, // Slightly before exact end to avoid frame glitching
-                    duration: tweenDuration,
-                    ease: "sine.inOut", // This provides the exponential smooth slowdown at both ends
-                    repeat: -1, // Infinite loop
-                    yoyo: true, // Play forwards, then backwards
-                }
-            );
-        };
+            const startAnimation = () => {
+                const actualDuration = video.duration || 5.03;
+                // Adjust the time it takes to complete one forward sequence by the speed factor
+                const tweenDuration = actualDuration / v.speed;
 
-        if (video.readyState >= 1) {
-            startAnimation();
-        } else {
-            video.addEventListener('loadedmetadata', startAnimation);
-        }
+                gsap.fromTo(video,
+                    { currentTime: 0 },
+                    {
+                        currentTime: actualDuration - 0.05, // Slightly before exact end to avoid frame glitching
+                        duration: tweenDuration,
+                        ease: "sine.inOut", // This provides the exponential smooth slowdown at both ends
+                        repeat: -1, // Infinite loop
+                        yoyo: true, // Play forwards, then backwards
+                    }
+                );
+            };
+
+            if (video.readyState >= 1) {
+                startAnimation();
+            } else {
+                video.addEventListener('loadedmetadata', startAnimation);
+            }
+        });
     });
 }
 
