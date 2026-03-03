@@ -2,6 +2,7 @@ export function renderPerspective() {
   return `
     <section class="fade-in" style="animation-delay: 0.4s; padding-bottom: 15vh;">
       <div class="container">
+        <div class="card" style="padding: clamp(3rem, 5vw, 5rem);">
         <span class="micro-heading" data-i18n="perspective_kicker">Our Perspective</span>
         <h2 data-i18n="perspective_headline" style="margin-bottom: 3rem; font-size: clamp(32px, 4vw, 48px); font-weight: 400; max-width: 900px; line-height: 1.4;">The next generation of industry leaders will not be defined by speed alone.</h2>
         
@@ -49,6 +50,7 @@ export function renderPerspective() {
         </div>
 
         <p data-i18n="perspective_p2" style="font-size: 1.1rem; color: var(--text-primary); text-align: center; max-width: 600px; margin: 0 auto;">Our role is to design and position these enterprises before scale demands correction.</p>
+        </div>
       </div>
     </section>
   `;
