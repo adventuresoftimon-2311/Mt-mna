@@ -125,8 +125,8 @@ function initHomeAnimations() {
         );
     }
 
-    // 6. Init 3D Parallax on Company Tiles
-    initCompanyTilesParallax();
+    // 6. Init Video Ping-Pong Loops on Company Tiles
+    initCompanyVideoLoops();
 
     // 7. Init Hero Fullscreen Video
     initHeroFullscreen();
@@ -148,36 +148,42 @@ function initHeroFullscreen() {
     };
 }
 
-function initCompanyTilesParallax() {
-    if (window.matchMedia("(max-width: 768px)").matches) return;
+function initCompanyVideoLoops() {
+    const vids = [
+        { id: '#vid-united-creatives', speed: 1.0 },
+        { id: '#vid-united-law', speed: 1.2 },
+        { id: '#vid-otc-tech', speed: 1.3 }
+    ];
 
-    const tiles = document.querySelectorAll('.company-tile');
+    vids.forEach(v => {
+        const video = document.querySelector(v.id) as HTMLVideoElement;
+        if (!video) return;
 
-    tiles.forEach((tile: any) => {
-        const title = tile.querySelector('.company-title');
-        if (!title) return;
+        // Force pause native playback since GSAP will scrub it manually
+        video.pause();
 
-        tile.addEventListener('mousemove', (e: MouseEvent) => {
-            const rect = tile.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-            const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+        const startAnimation = () => {
+            const actualDuration = video.duration || 5.03;
+            // Adjust the time it takes to complete one forward sequence by the speed factor
+            const tweenDuration = actualDuration / v.speed;
 
-            gsap.to(title, {
-                x: x * 15,
-                y: y * 15,
-                duration: 0.4,
-                ease: 'power2.out'
-            });
-        });
+            gsap.fromTo(video,
+                { currentTime: 0 },
+                {
+                    currentTime: actualDuration - 0.05, // Slightly before exact end to avoid frame glitching
+                    duration: tweenDuration,
+                    ease: "sine.inOut", // This provides the exponential smooth slowdown at both ends
+                    repeat: -1, // Infinite loop
+                    yoyo: true, // Play forwards, then backwards
+                }
+            );
+        };
 
-        tile.addEventListener('mouseleave', () => {
-            gsap.to(title, {
-                x: 0,
-                y: 0,
-                duration: 0.7,
-                ease: 'elastic.out(1, 0.3)'
-            });
-        });
+        if (video.readyState >= 1) {
+            startAnimation();
+        } else {
+            video.addEventListener('loadedmetadata', startAnimation);
+        }
     });
 }
 

@@ -7,21 +7,21 @@ export function renderCompanies() {
           <!-- United Creatives -->
           <div class="card company-tile" style="position: relative; overflow: hidden; aspect-ratio: 16/9; cursor: pointer; padding: 0;">
             <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #fff;">
-                <img src="/united-creatives.gif" alt="United Creatives" style="width: 100%; height: 100%; object-fit: contain; filter: brightness(1) contrast(1);" class="hover-alive">
+                <video id="vid-united-creatives" class="company-anim-video" src="/united-creatives.mp4" muted playsInline preload="auto" style="width: 100%; height: 100%; object-fit: contain; filter: brightness(1) contrast(1);"></video>
             </div>
           </div>
 
           <!-- United Law -->
           <div class="card company-tile" style="position: relative; overflow: hidden; aspect-ratio: 16/9; cursor: pointer; padding: 0;">
             <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #fff;">
-                <img src="/united-law.gif" alt="United Law" style="width: 100%; height: 100%; object-fit: contain; filter: brightness(1) contrast(1);" class="hover-alive">
+                <video id="vid-united-law" class="company-anim-video" src="/united-law.mp4" muted playsInline preload="auto" style="width: 100%; height: 100%; object-fit: contain; filter: brightness(1) contrast(1);"></video>
             </div>
           </div>
 
           <!-- OTC Tech -->
           <div class="card company-tile" style="position: relative; overflow: hidden; aspect-ratio: 16/9; cursor: pointer; padding: 0;">
             <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #fff;">
-                <img src="/otc-tech.gif" alt="OTC Tech" style="width: 100%; height: 100%; object-fit: contain; filter: brightness(1) contrast(1);" class="hover-alive">
+                <video id="vid-otc-tech" class="company-anim-video" src="/otc-tech.mp4" muted playsInline preload="auto" style="width: 100%; height: 100%; object-fit: contain; filter: brightness(1) contrast(1);"></video>
             </div>
           </div>
 
