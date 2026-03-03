@@ -138,8 +138,14 @@ function initHeroFullscreen() {
 
     if (!heroSection || !heroVideo) return;
 
-    // Apply custom playback speed for the hero video
+    // Apply custom playback speed and ensure it stays through autoplay
+    heroVideo.defaultPlaybackRate = 0.75;
     heroVideo.playbackRate = 0.75;
+
+    // Some browsers reset playback rate on loop or play, this forces it
+    heroVideo.onplay = () => {
+        heroVideo.playbackRate = 0.75;
+    };
 }
 
 function initCompanyTilesParallax() {
