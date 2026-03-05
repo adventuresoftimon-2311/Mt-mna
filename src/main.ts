@@ -15,14 +15,12 @@ import { renderWhatWeDo } from './components/whatwedo'
 import { renderPortfolio } from './components/portfolio'
 import { renderLeadership } from './components/leadership'
 import { renderContact } from './components/contact'
-
 import { renderAdmin, bindAdminEvents } from './components/admin'
-import { renderBlogSection } from './components/blog'
 import { renderModal, bindModalEvents } from './components/modal'
 import { renderTool, bindToolEvents } from './components/tool'
 
 const routes: Record<string, () => string> = {
-  'home': () => renderHero() + renderCompanies() + renderMandate() + renderFramework() + renderBlogSection() + renderPerspective() + renderVision(),
+  'home': () => renderHero() + renderCompanies() + renderMandate() + renderFramework() + renderPerspective() + renderVision(),
   'about': renderAbout,
   'what-we-do': renderWhatWeDo,
   'portfolio': renderPortfolio,

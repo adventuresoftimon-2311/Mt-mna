@@ -8,8 +8,8 @@ export function renderPortfolio() {
         <div class="grid-2">
           <!-- United Creatives -->
           <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);">
-            <div style="aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                <video class="port-vid-uc" src="/united-creatives.mp4" muted playsInline preload="auto" style="width: 100%; height: 100%; object-fit: cover;"></video>
+            <div style="aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff; padding: 2rem;">
+                <img src="/logo-uc.png" alt="United Creatives" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
             <div style="padding: 2.5rem;">
                 <h3 data-i18n="port_uc_title" style="margin-bottom: 0.5rem; font-size: 1.5rem;">United Creatives</h3>
@@ -20,8 +20,8 @@ export function renderPortfolio() {
 
           <!-- United Law -->
           <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);">
-            <div style="aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                <video class="port-vid-ul" src="/united-law.mp4" muted playsInline preload="auto" style="width: 100%; height: 100%; object-fit: cover;"></video>
+            <div style="aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff; padding: 2rem;">
+                <img src="/logo-ul.png" alt="United Law" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
             <div style="padding: 2.5rem;">
                 <h3 data-i18n="port_ul_title" style="margin-bottom: 0.5rem; font-size: 1.5rem;">United Law</h3>
@@ -32,8 +32,8 @@ export function renderPortfolio() {
 
           <!-- OTC Tech -->
           <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);">
-            <div style="aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                <video class="port-vid-otc" src="/otc-tech.mp4" muted playsInline preload="auto" style="width: 100%; height: 100%; object-fit: cover;"></video>
+            <div style="aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff; padding: 2rem;">
+                <img src="/logo-otc.png" alt="OTC Tech" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
             <div style="padding: 2.5rem;">
                 <h3 data-i18n="port_otc_title" style="margin-bottom: 0.5rem; font-size: 1.5rem;">OTC Tech</h3>
@@ -44,8 +44,8 @@ export function renderPortfolio() {
 
           <!-- BRAENDZ -->
           <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);">
-            <div style="aspect-ratio: 16/9; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" alt="BRAENDZ Structure" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="hover-zoom">
+            <div style="aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000; padding: 3rem;">
+                <img src="/logo-braendz.png" alt="BRAENDZ Structure" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s ease;" class="hover-zoom">
             </div>
             <div style="padding: 2.5rem;">
                 <h3 data-i18n="port_braendz_title" style="margin-bottom: 0.5rem; font-size: 1.5rem;">BRAENDZ</h3>

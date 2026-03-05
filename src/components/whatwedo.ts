@@ -8,6 +8,9 @@ export function renderWhatWeDo() {
         <div class="grid-2">
           <!-- Origination -->
           <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 24px; box-shadow: none;">
+            <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 16px; margin-bottom: 2rem; background: var(--primary-bg);">
+              <video src="/Videos MtMNA/strategic foresight.mp4" autoPlay loop muted playsInline style="width: 100%; height: 100%; object-fit: cover;"></video>
+            </div>
             <h3 data-i18n="wwd_origination_title">Enterprise Origination</h3>
             <p data-i18n="wwd_origination_p1" style="color: var(--text-primary)">We design enterprises in sectors aligned with structural and technological evolution.</p>
             <div class="expandable-wrapper">
@@ -20,6 +23,9 @@ export function renderWhatWeDo() {
           
           <!-- Acquisition -->
           <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 24px; box-shadow: none;">
+             <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 16px; margin-bottom: 2rem; background: var(--primary-bg);">
+               <video src="/Videos MtMNA/institutional readiness.mp4" autoPlay loop muted playsInline style="width: 100%; height: 100%; object-fit: cover;"></video>
+             </div>
              <h3 data-i18n="wwd_acquisition_title">Strategic Acquisition</h3>
              <p data-i18n="wwd_acquisition_p1" style="color: var(--text-primary)">We identify companies with strong foundations and untapped structural potential.</p>
              <div class="expandable-wrapper">
@@ -32,6 +38,9 @@ export function renderWhatWeDo() {
           
           <!-- Capital -->
           <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 24px; box-shadow: none;">
+             <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 16px; margin-bottom: 2rem; background: var(--primary-bg);">
+               <video src="/Videos MtMNA/clarity of structure.mp4" autoPlay loop muted playsInline style="width: 100%; height: 100%; object-fit: cover;"></video>
+             </div>
              <h3 data-i18n="wwd_capital_title">Capital Alignment</h3>
              <p data-i18n="wwd_capital_p1" style="color: var(--text-primary)">We deploy capital selectively in alignment with structural readiness and long-term enterprise viability.</p>
              <div class="expandable-wrapper">
@@ -44,6 +53,9 @@ export function renderWhatWeDo() {
           
           <!-- Infrastructure -->
           <div class="card" style="background: transparent; border: none; padding: 0; border-top: 1px solid var(--divider); padding-top: 2rem; border-radius: 24px; box-shadow: none;">
+             <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 16px; margin-bottom: 2rem; background: var(--primary-bg);">
+               <video src="/Videos MtMNA/technological integration.mp4" autoPlay loop muted playsInline style="width: 100%; height: 100%; object-fit: cover;"></video>
+             </div>
              <h3 data-i18n="wwd_infra_title">Infrastructure & Systems</h3>
              <p data-i18n="wwd_infra_p1" style="color: var(--text-primary)">Through internal capabilities and OTC Tech, we ensure every enterprise operates on a scalable, resilient foundation.</p>
              <div class="expandable-wrapper">
