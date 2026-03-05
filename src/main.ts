@@ -3,7 +3,7 @@ import { initI18n, switchLanguage, applyTranslations } from './i18n'
 import { initGlobalAnimations, runPageAnimations } from './animations'
 import { renderHeader } from './components/header'
 import { renderHero } from './components/hero'
-import { renderCompanies } from './components/companies'
+
 import { renderMandate } from './components/mandate'
 import { renderFramework } from './components/framework'
 import { renderPerspective } from './components/perspective'
@@ -20,7 +20,7 @@ import { renderModal, bindModalEvents } from './components/modal'
 import { renderTool, bindToolEvents } from './components/tool'
 
 const routes: Record<string, () => string> = {
-  'home': () => renderHero() + renderCompanies() + renderMandate() + renderFramework() + renderPerspective() + renderVision(),
+  'home': () => renderHero() + renderMandate() + renderFramework() + renderPerspective() + renderVision(),
   'about': renderAbout,
   'what-we-do': renderWhatWeDo,
   'portfolio': renderPortfolio,
