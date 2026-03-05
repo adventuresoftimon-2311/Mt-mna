@@ -3,7 +3,7 @@ export function renderHeader() {
     <header id="main-header" style="position: sticky; top: 0; z-index: 1000; background: var(--primary-bg); transition: padding 0.3s ease, background-color 0.3s ease, border-bottom 0.3s ease;">
       <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
         <div class="logo">
-          <img src="/logo.png" alt="MT & MNA Ventures" id="header-logo" style="height: 90px; transition: height 0.3s ease; object-fit: contain;">
+          <img src="/logo-otc.png" alt="OTC Technologies" id="header-logo" style="height: 60px; transition: height 0.3s ease; object-fit: contain;">
         </div>
         <nav class="nav-links">
           <a href="#" class="nav-item magnetic" data-page="home" data-i18n="nav_home">Home</a>
