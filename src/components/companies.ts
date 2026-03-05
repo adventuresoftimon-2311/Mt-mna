@@ -14,7 +14,7 @@ export function renderCompanies() {
           <!-- United Law -->
           <div class="card company-tile" style="position: relative; overflow: hidden; aspect-ratio: 16/9; cursor: pointer; padding: 0;">
             <div style="position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center; padding: 2rem;">
-                <img src="/logo-ul.png" alt="United Law" style="width: 100%; height: 100%; object-fit: contain;">
+                <img src="/logo-otc.png" alt="OTC Tech" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
           </div>
 
