@@ -7,7 +7,7 @@ export function renderHero() {
       <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 100%); z-index: -10; pointer-events: none;"></div>
       
       <div class="container" style="position: relative; z-index: 2; max-width: 1200px; padding: 0 2rem; display: flex; flex-direction: column; align-items: center;">
-        <h1 data-i18n="hero_headline" style="margin-bottom: 2rem; line-height: 1.1;">We Design Enduring Enterprises.</h1>
+        <h1 data-i18n="hero_headline" style="margin-bottom: 2rem; line-height: 1.1; color: var(--accent-blue); text-transform: uppercase;">We Design <br />Enduring Enterprises.</h1>
         <p class="subtext" data-i18n="hero_subtext" style="color: rgba(15, 23, 42, 0.8); font-size: clamp(20px, 2.5vw, 36px); margin: 0; font-weight: 300; letter-spacing: 0.01em;">Shaping the Industry Leaders of Tomorrow.</p>
       </div>
     </section>
